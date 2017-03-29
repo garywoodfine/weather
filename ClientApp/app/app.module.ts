@@ -5,7 +5,7 @@ import { AppComponent } from './components/app/app.component'
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { WeatherComponent } from './components/weather/weather.component';
-
+import { WeatherService } from '../services/weather.service';
 
 @NgModule({
     bootstrap: [ AppComponent ],
@@ -24,6 +24,10 @@ import { WeatherComponent } from './components/weather/weather.component';
             { path: 'weather', component: WeatherComponent },
             { path: '**', redirectTo: 'home' }
         ])
+        
+    ],
+    providers: [
+        WeatherService
     ]
 })
 export class AppModule {

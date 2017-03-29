@@ -26,7 +26,7 @@ export class WeatherComponent implements OnInit {
 
         this.service.getWeatherReport(city).subscribe(result => {
             this.forecasts = result.json() as Forecast;
-        })
+        });
     }
 }
 

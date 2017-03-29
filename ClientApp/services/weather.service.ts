@@ -13,7 +13,7 @@ export class WeatherService implements IWeatherService{
 
     getWeatherReport(city : string): Observable<Response>{
          
-         var url :string = '/api/Weather/WeatherForecast/{city}';
+         var url :string = '/api/Weather/WeatherForecast/' + city;
 
         return this.http.get(url);
     }
