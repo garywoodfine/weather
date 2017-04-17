@@ -18,6 +18,9 @@ export class WeatherComponent implements OnInit {
     }
 
     ngOnInit(): void{
+
+        // In future we will add a method here to determine users default city
+        // for now we will just set it to hometown
         this.getWeatherReport('Swindon');
 
     }

@@ -22,8 +22,8 @@ namespace weather.Controllers
                     var response = await client.GetAsync($"/data/2.5/weather?q={city}&appid=ce912bece7a6b884bcc42220fac91dea&units=metric");
                     response.EnsureSuccessStatusCode();
 
-                    var stringResult = await response.Content.ReadAsStringAsync();
-                    var openWeather = JsonConvert.DeserializeObject<WeatherResponse>(stringResult);
+                    var result = await response.Content.ReadAsStringAsync();
+                    var openWeather = JsonConvert.DeserializeObject<WeatherResponse>(result);
 
                     var forecast = new
                     {
